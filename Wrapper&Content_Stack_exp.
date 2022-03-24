@@ -1,0 +1,33 @@
+ import { constants } from 'buffer'
+    import type { NextPage } from 'next'
+    import Head from 'next/head'
+    import Image from 'next/image'
+
+    const style = {
+          wrapper: 'flex justify-center h-screen w-screen select-none  text-white',
+          content: ' w-2/3 flex justify-between',
+         }
+
+
+export default function Home(){
+  return (
+  <div className = {style.wrapper} style={{backgroundColor:'#1520bf'}}>
+    <div className = {style.content} style={{maxWidth:'1400px'}}>
+      <h2>Sidebar</h2>
+      <h2>Feed</h2>
+      <h2>Widgets</h2>
+   </div>  
+   </div>  
+  )
+}
+
+//Here is what's going on: you add the text-white to the wrapper so all text is white and the default background color is white too so the page will look like it's empty.
+also the bg [#1520b] the value here is invalid it should be 3 or 6 letters long and you should connect it with bg using - like this bg-[#1520b9], but it won't work either because you can't use arbitrary values in tailwind with react like this. so I would recommend that you move it to inline style like this:
+
+style={{backgroundColor:'#1520bf'}}
+
+and the same goes for max-w-[1400px] make it :
+
+style={{maxWidth:'1400px'}}
+
+So your code should look like this:
