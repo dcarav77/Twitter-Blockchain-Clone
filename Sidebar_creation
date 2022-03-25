@@ -18,7 +18,7 @@ const style = {
     handle: 'text-[#8899a6]',
     moreContainer: 'flex items-center mr-2',
 }
-
+ 
 
 function Sidebar(){
     return (
@@ -33,11 +33,17 @@ function Sidebar(){
        <div>Lists</div>
        <div>Profile</div>
        <div>More</div>
-       <div className = {style.tweetbutton}>Mint</div>
-
-       </div>
-       
-       </div>
+        <div className = {style.tweetButton}>Mint</div>
+    </div>
+        <div className = {style.profileLeft}></div>
+        <div className = {style.profileRight}>
+        <div className = {style.details}>
+        <div className = {style.name}>dustinCar</div>
+        <div className = {style.handle}>@dusto69</div>
+        </div>
+        <FiMoreHorizontal />
+        </div>
+        </div>
     )
 }
 export default Sidebar 
