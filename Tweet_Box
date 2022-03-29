@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import React from 'react-icons'
 
 const style = {
@@ -15,6 +16,27 @@ const style = {
 }
 
 const TweetBox = () => {
-    return <div className ={style.wrapper}></div>
+    const [tweetMessage, setTweetMessage] = useState ('')
+    return (
+            <div className ={style.wrapper}>
+            <div className= {style.tweetBoxLeft}>
+            <img 
+                 src= "https://d1bvpoagx8hqbg.cloudfront.net/259/ce697834bacdad2949bb49edd98bea34.jpg"
+                 alt= "profile image" 
+                 className = {style.profileImage} 
+            />
+            </div>
+            <div className = {style.tweetBoxRight}>
+                <form>
+                    <textarea
+                        className= {style.inputField}
+                            placeholder = "What's happening?"
+                            value = {tweetMessage}
+                            onChange= {(e) => setTweetMessage (e.target.value)}
+                    />
+                    </form>
+            </div>
+            </div>
+    )
 }
 export default TweetBox
