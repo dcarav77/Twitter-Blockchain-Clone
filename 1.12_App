@@ -1,0 +1,11 @@
+import '../styles/globals.css'
+import '../pages/library/hexstyles.css'
+
+function MyApp({ Component, pageProps }, AppProps) {
+  return (
+  <Component {...pageProps} />
+  )
+}
+
+
+export default MyApp
